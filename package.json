@@ -1,0 +1,29 @@
+{
+  "name": "create-react-npm-component",
+  "version": "0.0.1",
+  "description": "quickly create react component skeleton for upload to npm",
+  "main": "index.js",
+  "bin": {
+    "create-react-npm-component": "./index.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "react",
+    "component",
+    "create",
+    "distribute"
+  ],
+  "author": "Jeff Willette",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "command-line-args": "^4.0.7",
+    "command-line-usage": "^4.0.1"
+  }
+}
