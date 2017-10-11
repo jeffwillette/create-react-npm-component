@@ -1,22 +1,13 @@
 module.exports = {
-  // the babelrc file which needs to be written in main
-  babelrc: {
-    name: '.babelrc',
-    content: {
-      presets: ['env'],
-      plugins: ['transform-object-rest-spread', 'transform-react-jsx'],
-    },
-  },
-
   // gitignore written in main
   gitignore: {
-    name: '.gitignore',
-    content: 'node_modules/',
+    name: ".gitignore",
+    content: "node_modules/"
   },
 
   // webpackConfig written in main
   webpackConfig: {
-    name: 'webpack.config.js',
+    name: "webpack.config.js",
     content: `var path = require('path');
 module.exports = {
   entry: './src/index.js',
@@ -33,9 +24,7 @@ module.exports = {
         exclude: /(node_modules|bower_components|build)/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: ['env']
-          }
+          options: {},
         }
       },
       {
@@ -43,7 +32,7 @@ module.exports = {
         use: [ 'style-loader', 'css-loader' ]
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|eot|svg|ttf|woff|woff2)$/,
         use: [
           {
             loader: 'file-loader',
@@ -56,11 +45,11 @@ module.exports = {
   externals: {
     'react': 'commonjs react' // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
   }
-};`,
+};`
   },
 
   index: {
-    name: 'src/index.js',
+    name: "src/index.js",
     content: `import React from 'react';
 
 class MyComponent extends React.Component {
@@ -70,25 +59,33 @@ class MyComponent extends React.Component {
     );
   }
 }
-export default MyComponent;`,
+export default MyComponent;`
   },
 
   packageJSON: {
-    name: 'package.json',
+    name: "package.json",
     content: {
-      name: '',
-      version: '0.1.0',
-      description: '',
-      main: 'build/index.js',
+      name: "",
+      version: "0.1.0",
+      description: "",
+      main: "build/index.js",
       scripts: {
         test: 'echo "Error: no test specified" && exit 1',
-        start: 'webpack --watch',
-        build: 'webpack',
+        start: "webpack --watch",
+        build: "webpack -p"
       },
       author: {
-        name: '',
-        email: '',
+        name: "",
+        email: ""
       },
-    },
-  },
+      babel: {
+        presets: ["env"],
+        plugins: [
+          "transform-object-rest-spread",
+          "transform-react-jsx",
+          "transform-class-properties"
+        ]
+      }
+    }
+  }
 };
