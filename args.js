@@ -19,6 +19,7 @@ module.exports = {
     "babel-plugin-transform-react-jsx",
     "babel-preset-env",
     "babel-plugin-transform-class-properties",
-    "eslint-plugin-class-property"
+    "eslint-plugin-class-property",
+    "webpack-cli"
   ]
 };
