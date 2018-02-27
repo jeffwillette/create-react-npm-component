@@ -5,7 +5,7 @@ to NPM.
 
 ### Usage
 
-Assuming you have a blank project made with create-reac
+Assuming you have a blank project made with create-react-app
 
 ```
 npm install -g create-react-npm-component
@@ -23,7 +23,7 @@ npm link
 npm start
 ```
 
-In another terminal, fire up the project you want to import the compoent into for testing
+In another terminal, fire up the project you want to import the component into for testing
 and development.
 ```
 cd /other/project-dir
